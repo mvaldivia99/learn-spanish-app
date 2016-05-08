@@ -1,0 +1,11 @@
+Language App
+Objects:
+- users
+
+Pages/Views
+- homepage
+- login
+- logout
+- individual exercise pages
+	- should show a different thing(?) if exercise has been completed successfully
+

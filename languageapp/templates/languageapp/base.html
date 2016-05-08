@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="{% static 'css/lanaguageapp.css' %}"/>
+		<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<title>Language Learning App</title>
+	</head>
+	<body>
+		<div class="page-header">
+			<a href="/"><h1>Saludos!</h1></a>
+			<h3>Learn Spanish</h3>
+		</div> 
+		<div id="navigation">
+			<ul>
+				<a href="#"><li>Extra Reading</li></a>
+				<a href="{% url 'exercises' %}"><li>Exercises</li></a>
+				<a href="#"><li>About</li></a>
+			</ul>
+		</div>
+		<div class="main-content">
+			{% block content %}
+			{% endblock %}
+		</div>	
+	</body>
+<html>
