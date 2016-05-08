@@ -30,7 +30,7 @@ function startVocab()
 	leftButton.appendChild(glyphL);
 	divDirections.appendChild(leftButton);	
 
-	var rightButton = document.createElement('button');
+	var rightButton = document.createElement('p');
 	rightButton.setAttribute('type', 'button');
 	rightButton.setAttribute('onclick', 'slides("first")');
 	rightButton.setAttribute('class', 'btn btn-default btn-lg');
@@ -50,6 +50,7 @@ function startVocab()
 	{
 		switch(which)
 		{
+			//haven't finalized; need to get button working first
 			case "first":
 				textInContent.innerHTML = "Hola";
 				rightButton.setAttribute('onclick', 'slides("second")');

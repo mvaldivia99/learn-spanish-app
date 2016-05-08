@@ -115,3 +115,7 @@ h2#headerTitle{
 button{
 	margin-right: 200px;
 }
+
+.glyphicon-arrow-right{
+	pointer-events: all;
+}
