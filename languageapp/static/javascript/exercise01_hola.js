@@ -35,8 +35,6 @@ function startVocab()
 	//create left button
 	var leftButton = document.createElement('button');
 	leftButton.setAttribute('class', 'btn btn-default btn-lg');
-	leftButton.setAttribute('onclick', 'alert("success")');
-	leftButton.setAttribute('type', 'button');
 	//create a span element that will hold glyphicon
 	var glyphL = document.createElement('span');
 	glyphL.setAttribute('class', 'glyphicon glyphicon-arrow-left');
@@ -44,10 +42,9 @@ function startVocab()
 	divDirections.appendChild(leftButton);	
 
 	//create right button
-	var rightButton = document.createElement('p');
-	rightButton.setAttribute('type', 'button');
+	var rightButton = document.createElement('button');
 	//set onclick attribute that will run an alert function to show that it works
-	rightButton.setAttribute('onclick', 'alert("success")');
+	rightButton.setAttribute('onclick', 'slides("first");');
 	rightButton.setAttribute('class', 'btn btn-default btn-lg');
 	//create a span element that will contain a glyphicon
 	var glyphR = document.createElement('span');
@@ -116,4 +113,3 @@ function createButtons()
 //create the buttons and show the introduction
 intro();
 createButtons();
-

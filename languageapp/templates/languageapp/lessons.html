@@ -1,0 +1,16 @@
+{% extends 'languageapp/base.html' %}
+	{% block content %}
+		<p class="exercise-title">Lesson 1: Hola!</p>
+		<p class="exercise-descript">Learn how to intrduce yourself. This lesson will also show you 
+			the basic structure of the lessons.</p>
+		<ul>
+			<a href="{% url 'lesson01_Vocab' %}"><li class="exercise-descript">Vocabulary</li></a>
+			<a href="{% url 'lesson01_Dialogue' %}"><li class="exercise-descript">Dialogue</li></a>
+		</ul>	
+		<p class="exercise-title">Lesson 2: Yo/T&#0250/Usd/Usds</p>
+		<p class="exercise-descript">This lesson focuses on the way to address yourself, a person, or people.
+		 We also get into the use of verbs and how they change according to who is addressed.</p>	
+		<ul>
+		 	<a href="{% url 'lesson02_Vocab' %}"><li class="exercise-descript">Vocabulary</li></a>
+		</ul>
+	{% endblock %}

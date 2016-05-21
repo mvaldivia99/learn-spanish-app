@@ -28,12 +28,13 @@ h1, h2, h3, h4{
 
 #navigation{
 	display: block;
-	width: 40%;
+	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
 
 }
-li, .gui-buttons{
+.nav-buttons{
+	list-style: none;
 	text-align: center;
 	display: inline-block;
 	width: 150px;
@@ -43,9 +44,6 @@ li, .gui-buttons{
 	border-radius: 10px;
 }
 
-ul{
-	list-style: none;
-}
 
 #navigation a:link, #navigation a:visited, #navigation a:hover{
 	text-decoration: none;
@@ -84,7 +82,7 @@ ul{
 
 #buttonDiv{
 	position: absolute;
-	margin: 50px 10px 20px 30px;
+	margin: 80px 10px 20px 30px;
 }
 
 h2#headerTitle{
@@ -101,7 +99,6 @@ h2#headerTitle{
 .textPresentation{
 	position: absolute;
 	width: 600px;
-	height: 400px;
 	font-size: 20pt;
 	margin: 300px 50px 50px 160px;
 	text-align: center;
@@ -109,13 +106,27 @@ h2#headerTitle{
 
 #directionButtons{
 	position: absolute;
-	margin: 400px 50px 50px 310px;
+	margin: 450px 50px 50px 310px;
 }
 
 button{
 	margin-right: 200px;
 }
 
-.glyphicon-arrow-right{
-	pointer-events: all;
+a:link, a:hover, a:active {
+	text-decoration: none;
+}
+
+table {
+	position: absolute;
+	margin-top: 130px;
+	margin-left: 190px;
+	border-collapse: separate;
+	width: 40%
+}
+
+table, th, td {
+	text-align: center;
+	height: 50px;
+	border: 1px solid black;
 }
