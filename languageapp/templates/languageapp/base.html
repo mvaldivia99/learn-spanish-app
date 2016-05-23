@@ -11,6 +11,14 @@
 		<div class="page-header">
 			<a href="/"><h1>Saludos!</h1></a>
 			<h3>Learn Spanish</h3>
+
+			{% if user.is_authenticated %}
+			 <p >Welcome back {{ user.username }}!</p>
+			 <a href="{% url 'logout' %}">Logout</a><br/>
+			{% else %}
+             <a href="{% url 'register' %}">Register now!</a>
+             <a href="{% url 'login' %}">Log-in</a>
+            {% endif %}
 		</div> 
 		<div id="navigation">
 			<ul>

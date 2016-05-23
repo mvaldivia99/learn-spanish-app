@@ -1,0 +1,15 @@
+{% extends 'languageapp/base.html' %}
+	{% block content %}
+		{% if registered %}
+			<h1>Thank you for registering to Cooking with Code</h1>
+		{% else %}
+	        <h1>Register Now!</h1>
+	        <form id="user_form" method="post" action="/languageapp/register/" enctype="multipart/form-data">
+	            {% csrf_token %}
+
+	            {{ user_form.as_p }}
+
+	            <input type="submit" name="submit" value="Register"/>
+	        </form>
+	    {% endif %}
+	{% endblock %}
