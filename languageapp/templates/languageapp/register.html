@@ -4,7 +4,7 @@
 			<h1>Thank you for registering to Cooking with Code</h1>
 		{% else %}
 	        <h1>Register Now!</h1>
-	        <form id="user_form" method="post" action="/languageapp/register/" enctype="multipart/form-data">
+	        <form id="user_form" method="post" action="/register/" enctype="multipart/form-data">
 	            {% csrf_token %}
 
 	            {{ user_form.as_p }}

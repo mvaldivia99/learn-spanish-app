@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import UserForm
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect, HttpResponse
 
@@ -28,11 +29,10 @@ def register(request):
 
 	if request.method == 'POST':
 		user_form = UserForm(data=request.POST)
-		
+
 		if user_form.is_valid() :
 			user = user_form.save()
-
-			user.setpassword(user.password)
+			user.set_password(user.password)
 			user.save()
 
 			registered = True
@@ -55,7 +55,7 @@ def user_login(request):
 		if user:
 			if user.is_active:
 				login(request, user)
-				return hHttpResponsedRedirect('/')
+				return HttpResponseRedirect('/')
 
 		else:
 			print("Invalid login details: {0}, {1}".format(username, password))
@@ -70,6 +70,6 @@ def restricted(request):
 
 def user_logout(request):
 	logout(request)
-	return hHttpResponsedRedirect('/')
+	return HttpResponseRedirect('/')
 
 

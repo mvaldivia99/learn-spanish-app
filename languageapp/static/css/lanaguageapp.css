@@ -10,6 +10,13 @@
     text-decoration: none;
 }
 
+.reg{
+	float: right;
+	color: #ffffff;
+	text-decoration: none;
+	display: block;
+}
+
 .page-header h3{
 	font-size: 30pt;
 	color: #ffd9b3;	
