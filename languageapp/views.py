@@ -28,10 +28,10 @@ def register(request):
 	registered = False
 
 	if request.method == 'POST':
-		user_form = UserForm(data=request.POST)
+		user_form = UserForm(data=request.POST, user=request.user)
 
-		if user_form.is_valid() :
-			user = user_form.save()
+		if user_form.is_valid():
+			user = user_form.save()		
 			user.set_password(user.password)
 			user.save()
 
@@ -63,6 +63,14 @@ def user_login(request):
 
 	else:
 		return render(request, 'languageapp/login.html')
+
+def email_present(user):
+	if User.objects.filter(email=user.email).exists():
+		return True
+	else:
+		return False
+
+
 		
 @login_required
 def restricted(request):
