@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 
 # Create your views here.
 def home(request):
-	return render(request, 'languageapp/base.html', {})
+	return render(request, 'languageapp/home.html', {})
 
 def lessons(request):
 	return render(request, 'languageapp/lessons.html', {})
@@ -28,7 +28,7 @@ def register(request):
 	registered = False
 
 	if request.method == 'POST':
-		user_form = UserForm(data=request.POST, user=request.user)
+		user_form = UserForm(data=request.POST)
 
 		if user_form.is_valid():
 			user = user_form.save()		

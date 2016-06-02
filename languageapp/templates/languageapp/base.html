@@ -10,8 +10,8 @@
 	<body>
 		<div class="page-header">
 			{% if user.is_authenticated %}
-			 <p class="reg">Welcome back {{ user.username }}!</p>
-			 <a class="reg" href="{% url 'logout' %}">Logout</a><br/>
+			 <p class="reg">Welcome back {{ user.username }}!</p><br/>
+			 <a class="reg" href="{% url 'logout' %}">Logout</a>
 			{% else %}
              <a class="reg" href="{% url 'register' %}">Register now!</a><br/>
              <a class="reg" href="{% url 'login' %}">Log-in</a>
